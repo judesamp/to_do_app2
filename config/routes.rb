@@ -1,4 +1,6 @@
 Whatever::Application.routes.draw do
+
+  resources :to_dos
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

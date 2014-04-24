@@ -1,0 +1,2 @@
+class AssigneesController < ApplicationController
+end
