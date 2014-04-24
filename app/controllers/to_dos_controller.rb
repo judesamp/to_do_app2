@@ -34,6 +34,23 @@ class ToDosController < ApplicationController
     end
   end
 
+  def destroy
+    @to_do = ToDo.find(params[:id])
+
+    if @to_do.delete
+      redirect_to to_dos_path
+    end
+  end
+
+  def todolist
+    @to_dos = ToDo.incomplete
+  end
+
+  def completed
+    @to_dos = ToDo.completed
+  end
+
+
   private
 
   def to_do_params

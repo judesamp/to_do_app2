@@ -1,0 +1,22 @@
+.row
+  .col-lg-6.col-md-6.col-sm-6
+    %h1.title New Assignee
+  .col-lg-6.col-md-6.col-sm-6
+    = button_to "New Assignee", new_assignee_path, method: 'get', class: "add_button"
+
+.row
+  -unless @assignees.empty?
+    - @assignees.each do |assignee|
+      .col-lg-4.col-md-4.col-sm-4
+        .panel.panel-default.custom_panel
+
+          %h4.title= link_to assignee.name, "assignees/#{assignee.id}", class: "Name"
+          %br
+          = "Email"
+          = assignee.email
+          %br
+          
+          %br
+          %br
+  -else
+    "There are no assignees in the database."
