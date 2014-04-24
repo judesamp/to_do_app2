@@ -1,0 +1,14 @@
+.col-lg-12.col-md-12.col-sm-12.panel.panel-default.custom_panel.search_box
+  %h4 Search
+  = form_tag search_to_dos_path, method: "get" do
+    Choose a category to search
+    = select_tag "search[type]", options_for_select([["Assignee Name", "1"], ["Yesterday's Tasks", "2"], ["Today's Tasks", "3"], ["This week's tasks", "4"], ["This month's tasks", "5"], ["Completed", "6"]])
+    %br
+    %br
+    = text_field_tag "search[term]"
+    = submit_tag "Search"
+
+%br
+%br
+%br
+%br

@@ -1,12 +1,18 @@
 .panel.panel-default.custom_panel.form-group
-  = f.label :task
-  = f.text_field :task, class: "form-control"
+	= f.label :task
+	= f.text_field :task, class: "form-control"
 
-  = f.label :description
-  = f.text_field :description, class: "form-control"
+	= f.label :description
+	= f.text_field :description, class: "form-control"
 
-  = f.label :due_date
-  = f.date_select :due_date, class: "form-control"
-
-  = f.label :completed
-  = f.text_field :completed, class: "form-control"
+	= f.label :due_date
+	= f.date_select :due_date, class: "form-control"
+	%br
+	
+	- if @to_do.present? 
+		= f.label :completed
+		= f.text_field :completed, class: "form-control"
+	
+	= f.label "Assign this task to:"
+	%br
+	= f.select :assignee_id, Assignee.all.collect {|d| [d.name, d.id] }

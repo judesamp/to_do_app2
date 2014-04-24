@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424182821) do
+ActiveRecord::Schema.define(version: 20140424220932) do
 
   create_table "assignees", force: true do |t|
     t.string "name"
@@ -21,8 +21,7 @@ ActiveRecord::Schema.define(version: 20140424182821) do
   create_table "to_dos", force: true do |t|
     t.string  "task"
     t.text    "description"
-    t.string  "completed"
-    t.string  "boolean",     default: "f"
+    t.boolean "completed",   limit: 255, default: false
     t.date    "due_date"
     t.integer "assignee_id"
   end

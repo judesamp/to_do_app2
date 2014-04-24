@@ -50,6 +50,11 @@ class ToDosController < ApplicationController
     @to_dos = ToDo.completed
   end
 
+  def search
+    search_terms = params[:search]
+    @to_dos = ToDo.search(search_terms)
+  end
+
 
   private
 
