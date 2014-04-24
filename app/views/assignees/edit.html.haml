@@ -1,0 +1,4 @@
+=form_for @assignee, url: assignee_path, action: "PUT" do |f|
+  =render "form", f: f
+
+  = f.submit "Edit"

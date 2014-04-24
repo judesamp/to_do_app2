@@ -1,1 +1,12 @@
-form
+.panel.panel-default.custom_panel.form-group
+  = f.label :task
+  = f.text_field :task, class: "form-control"
+
+  = f.label :description
+  = f.text_field :description, class: "form-control"
+
+  = f.label :due_date
+  = f.text_field :due_date, class: "form-control"
+
+  = f.label :completed
+  = f.text_field :completed, class: "form-control"

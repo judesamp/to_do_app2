@@ -1,0 +1,4 @@
+=form_for @new_to_do, url: to_dos_path do |f|
+  =render "form", f: f
+
+  = f.submit "New"

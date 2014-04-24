@@ -382,3 +382,2222 @@ NameError (uninitialized constant ToDosController::Todo):
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-24 13:50:38 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 148ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:50:48 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ToDosController::Todo):
+  app/controllers/to_dos_controller.rb:4:in `index'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:51:13 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ToDosController::Todos):
+  app/controllers/to_dos_controller.rb:4:in `index'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:51:53 -0400
+
+LoadError (Unable to autoload constant ToDosController, expected /Users/judesamp/Sites/ironyard/to_do_app/app/controllers/to_dos_controller.rb to define it):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:464:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3242615033938229803__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-24 13:54:43 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 52ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:54:48 -0400
+
+LoadError (Unable to autoload constant ToDosController, expected /Users/judesamp/Sites/ironyard/to_do_app/app/controllers/to_dos_controller.rb to define it):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:464:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3764983433368193917__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:55:06 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ToDosController::Todos):
+  app/controllers/to_dos_controller.rb:4:in `index'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:56:00 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ToDosController::Todo):
+  app/controllers/to_dos_controller.rb:4:in `index'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.4ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:58:17 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 4571ms (Views: 4570.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:22 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:58:41 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant ToDosController::Todo):
+  app/controllers/to_dos_controller.rb:4:in `index'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 13:58:49 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 78ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 13:58:49 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:21:06 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 308ms (Views: 274.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:21:07 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:21:16 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/new.html.haml within layouts/application (58.7ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @new_todo, url: to_dos_path do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "New"
+  app/views/to_dos/new.html.haml:1:in `_app_views_to_dos_new_html_haml__3992843933393730709_2166204800'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:22:19 -0400
+Processing by ToDosController#new as HTML
+Completed 500 Internal Server Error in 37ms
+
+ActiveRecord::StatementInvalid (Could not find table 'to_dos'):
+  app/controllers/to_dos_controller.rb:8:in `new'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+  [1m[36m (16.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateToDosTable (20140424182629)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "to_dos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "task" varchar(255), "description" text, "completed" varchar(255), "boolean" varchar(255) DEFAULT 'f', "due_date" date, "assignee_id" integer) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140424182629"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAssignee (20140424182821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "assignees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140424182821"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:29:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#new as HTML
+  Rendered to_dos/new.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @new_todo, url: to_dos_path do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "New"
+  app/views/to_dos/new.html.haml:1:in `_app_views_to_dos_new_html_haml__4540739797983175596_2158365520'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.7ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:29:35 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/new.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @new_todo, url: to_dos_path do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "New"
+  app/views/to_dos/new.html.haml:1:in `_app_views_to_dos_new_html_haml__4540739797983175596_2158365520'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:30:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#new as HTML
+  Rendered to_dos/new.html.haml within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @new_todo, url: to_dos_path do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "New"
+  app/views/to_dos/new.html.haml:1:in `_app_views_to_dos_new_html_haml__2701400300116625304_2166106940'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (1.2ms)
+  Rendered to_dos/new.html.haml within layouts/application (58.9ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:30:47 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (0.1ms)
+  Rendered to_dos/new.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:15 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (0.1ms)
+  Rendered to_dos/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:31:44 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:33:22 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (110.4ms)
+  Rendered to_dos/new.html.haml within layouts/application (112.5ms)
+Completed 200 OK in 119ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:33:23 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-24 14:33:36 -0400
+
+AbstractController::ActionNotFound (The action 'create' could not be found for ToDosController):
+  actionpack (4.0.4) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__485163319691299363__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:42:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 176ms (Views: 135.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:29 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:42:35 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/new.html.haml within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @new_todo, url: to_dos_path do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "New"
+  app/views/to_dos/new.html.haml:1:in `_app_views_to_dos_new_html_haml___4104891720377598208_2170032940'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.9ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (24.8ms)
+  Rendered to_dos/new.html.haml within layouts/application (50.2ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:42:55 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-24 14:43:45 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"asdf", "description"=>"asdf", "due_date"=>"asdf", "completed"=>"asdf"}, "commit"=>"New"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `to_do_params' for #<ToDosController:0x000001023abf30>):
+  app/controllers/to_dos_controller.rb:12:in `create'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.6ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:52 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (1.7ms)
+  Rendered to_dos/new.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:44:56 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"adf", "description"=>"asdf", "due_date"=>"adsf", "completed"=>"asdf"}, "commit"=>"New"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "to_dos" ("completed", "description", "task") VALUES (?, ?, ?)[0m  [["completed", "asdf"], ["description", "asdf"], ["task", "adf"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 17ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:45:00 -0400
+
+
+Started GET "/to_dos/edit" for 127.0.0.1 at 2014-04-24 14:45:13 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "edit"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find ToDo with id=edit):
+  app/controllers/to_dos_controller.rb:21:in `show'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/to_dos/1/edit" for 127.0.0.1 at 2014-04-24 14:45:23 -0400
+Processing by ToDosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered to_dos/edit.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: =form_for @to_do, url: to_do_path, action: "PUT" do |f|
+    2:   =render "form", f: f
+    3: 
+    4:   = f.submit "Edit"
+  app/views/to_dos/edit.html.haml:1:in `_app_views_to_dos_edit_html_haml__1330764327436001488_2163947420'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/to_dos/1/edit" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+Processing by ToDosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/_form.html.haml (1.8ms)
+  Rendered to_dos/edit.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:12 -0400
+
+
+Started PATCH "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"aaaaa", "description"=>"asdf", "due_date"=>"", "completed"=>"asdf"}, "commit"=>"Edit", "id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "to_dos" SET "task" = ? WHERE "to_dos"."id" = 1[0m  [["task", "aaaaa"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:21 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:47:26 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:45 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:48:50 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:49:17 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:50:40 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:01 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:06 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:31 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:50 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:51:59 -0400
+
+
+Started GET "/new" for 127.0.0.1 at 2014-04-24 14:52:25 -0400
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (82.9ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:30 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (1.7ms)
+  Rendered to_dos/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:32 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"astttt", "description"=>"tttt", "due_date"=>"ttt", "completed"=>"ttt"}, "commit"=>"New"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "to_dos" ("completed", "description", "task") VALUES (?, ?, ?)  [["completed", "ttt"], ["description", "tttt"], ["task", "astttt"]]
+  [1m[36m (22.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 26ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:39 -0400
+
+
+Started GET "/to_dos/2" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered to_dos/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:52:44 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:01 -0400
+
+
+Started GET "/to_dos/1/edit" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+Processing by ToDosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/_form.html.haml (1.9ms)
+  Rendered to_dos/edit.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:06 -0400
+
+
+Started PATCH "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"aaaaa", "description"=>"asdf", "due_date"=>"2014 May 20", "completed"=>"asdf"}, "commit"=>"Edit", "id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (65.8ms)[0m  [1mUPDATE "to_dos" SET "due_date" = ? WHERE "to_dos"."id" = 1[0m  [["due_date", Tue, 20 May 2014]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 148ms (ActiveRecord: 66.9ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:53:19 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:57:46 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    1: row
+    2:   .col-lg-6.col-md-6.col-sm-6
+    3:     %h1.title To-Dos
+    4:   .col-lg-6.col-md-6.col-sm-6
+    5:     = button_to "Add New To-Do", new_to_do_path, method: 'get', class: "add_button"
+  app/views/to_dos/index.html.haml:2
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:58:06 -0400
+Processing by ToDosController#index as HTML
+  Rendered to_dos/index.html.haml within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+     5:     = button_to "Add New To-Do", new_to_do_path, method: 'get', class: "add_button"
+     6: 
+     7: .row
+     8:   -unless @to__dos.empty?
+     9:     - @to_dos.each do |to_do|
+    10:       .col-lg-4.col-md-4.col-sm-4
+    11:       .panel.panel-default.custom_panel
+  app/views/to_dos/index.html.haml:8:in `_app_views_to_dos_index_html_haml___1051443263268384372_2166262000'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:58:16 -0400
+Processing by ToDosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  Rendered to_dos/index.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `Completed?' for #<#<Class:0x00000103bd9c88>:0x00000101ea3b28>):
+    17:         = "Due date:"
+    18:         = to_do.due_date
+    19:         %br
+    20:         = Completed?
+    21:         = to_do.completed
+    22:         
+    23:         
+  app/views/to_dos/index.html.haml:20:in `block in _app_views_to_dos_index_html_haml___1051443263268384372_2163545160'
+  app/views/to_dos/index.html.haml:9:in `_app_views_to_dos_index_html_haml___1051443263268384372_2163545160'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+Processing by ToDosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  Rendered to_dos/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:28 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:58:32 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/2" for 127.0.0.1 at 2014-04-24 14:58:34 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:58:38 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (1.8ms)
+  Rendered to_dos/new.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:58:39 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 14:58:42 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos/2" for 127.0.0.1 at 2014-04-24 14:58:46 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+Processing by ToDosController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "to_dos"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  Rendered to_dos/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:14 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (1.8ms)
+  Rendered to_dos/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:22 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"asdf", "description"=>"asdf", "due_date"=>"asdf", "completed"=>"asdf"}, "commit"=>"New"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "to_dos" ("completed", "description", "task") VALUES (?, ?, ?)  [["completed", "asdf"], ["description", "asdf"], ["task", "asdf"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+Processing by ToDosController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "to_dos"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 14:59:28 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "to_dos"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 160ms (Views: 125.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:17 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:18 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:02:18 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+Processing by ToDosController#index as HTML
+  [1m[35m (17.1ms)[0m  SELECT COUNT(*) FROM "to_dos"
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:03 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:03 -0400
+
+
+Started GET "/items/items_for_sale" for 127.0.0.1 at 2014-04-24 15:04:14 -0400
+
+ActionController::RoutingError (No route matches [GET] "/items/items_for_sale"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (56.4ms)
+
+
+Started GET "/items/items_for_sale" for 127.0.0.1 at 2014-04-24 15:04:14 -0400
+
+ActionController::RoutingError (No route matches [GET] "/items/items_for_sale"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 15:04:22 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.3ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 15:04:50 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 1199ms (Views: 1197.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:04:51 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-24 15:04:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-24 15:04:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-04-24 15:05:02 -0400
+
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/judesamp/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+Processing by ToDosController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "to_dos"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:10 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (80.1ms)
+  Rendered to_dos/new.html.haml within layouts/application (93.1ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:15 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+Processing by ToDosController#new as HTML
+  Rendered to_dos/_form.html.haml (2.1ms)
+  Rendered to_dos/new.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:24 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+Processing by ToDosController#index as HTML
+  [1m[35m (30.7ms)[0m  SELECT COUNT(*) FROM "to_dos"
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  Rendered to_dos/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 61ms (Views: 29.4ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-24 15:05:25 -0400
+
+
+Started GET "/to_dos/1" for 127.0.0.1 at 2014-04-24 15:05:26 -0400
+Processing by ToDosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered to_dos/show.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
