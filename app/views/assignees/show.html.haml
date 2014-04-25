@@ -2,4 +2,11 @@
   .panel.panel-default.custom_panel.centered
     = @assignee.name
     %br
+    Contact:
     = @assignee.email
+    %br
+    %p 
+      Tasks
+      %ul
+        - @assignee.to_dos.each do |task|
+          %li= task.task

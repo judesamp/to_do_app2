@@ -1,34 +1,49 @@
 class ToDo < ActiveRecord::Base
   belongs_to :assignee
 
+
  	scope :incomplete, -> { where(completed: false)} 
  	scope :completed, -> { where(completed: true)}
+  scope :yesterday, -> { where(completed: true)}
+  # scope :today, -> { where(completed: true)}
+  # scope :this_week, -> { where(completed: true)}
+  # scope :this_month, -> { where(completed: true)}
 
   def self.search(search)
     type = search[:type]
     term = search[:term]
+    scopey = search[:completed]
+
+    search = ToDo.all
+
+
+    if scopey == "yes"
+      search = ToDo.completed
+    elsif scopey == "all"
+      search = ToDo.all
+    else
+      search = ToDo.incomplete
+    end
 
     case type
     when "1"
-      ToDo.joins(:assignee).where("name LIKE ?", term)
+      search = search.joins(:assignee).where("name LIKE ?", "%#{term}%")
     when "2"
-      puts "2"
+      search = search.where(due_date: (DateTime.now.beginning_of_day - 1.day)..DateTime.now.beginning_of_day)
     when "3"
-      puts "3"
+      search = search.where(due_date: (DateTime.now - 1.day..(DateTime.now)))
     when "4"
-      puts "4"
-    when "5"
-      puts "5"
+      search = search.where(due_date: (DateTime.now - 1.day..(DateTime.now + 6.days)))
     else
-      puts "6"
+      search = search.where(due_date: (DateTime.now - 1.day..(DateTime.now + 30.days)))
     end
 
-    # if type == "Completed"
-    #   ToDo.where(:completed => term)
-    # else
-    #   
-    # else
-    #   ToDo.where("date = ?", term)
-    # end
+    unless type == "1"
+      search = search.find(:all, :conditions => ["task LIKE ? OR description LIKE ? or due_date LIKE ?", "%#{term}%", "%#{term}%", "%#{term}%"])
+      search = search.joins(:assignee).where("name LIKE ?", "%#{term}%")
+    end
+  
+    search
+
   end
 end
