@@ -16337,3 +16337,2348 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
   Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
   Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 07:23:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 106ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:23:22 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.3ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (22.7ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (162.8ms)
+  Rendered to_dos/_search_form.html.haml (4.0ms)
+Completed 200 OK in 577ms (Views: 528.3ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:23 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:23:33.249974' AND '2014-05-25 11:23:33.250127') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' or due_date LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (5.5ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 34ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:23:33 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=dog&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:23:53 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"dog", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:23:53.564513' AND '2014-05-25 11:23:53.564626') AND (task LIKE '%dog%' OR description LIKE '%dog%' or due_date LIKE '%dog%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered to_dos/search.html.haml within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    12: 
+    13:           %h4.title= link_to to_do.task, "/to_dos/#{to_do.id}", class: "title_link"
+    14:           %br
+    15:           = to_do.assignee.name
+    16:           %br
+    17:           = to_do.description
+    18:           %br
+  app/views/to_dos/search.html.haml:15:in `block in _app_views_to_dos_search_html_haml___3312039335016387508_2165472500'
+  app/views/to_dos/search.html.haml:9:in `_app_views_to_dos_search_html_haml___3312039335016387508_2165472500'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=dog&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"dog", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:24:56.664965' AND '2014-05-25 11:24:56.665110') AND (task LIKE '%dog%' OR description LIKE '%dog%' or due_date LIKE '%dog%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered to_dos/search.html.haml within layouts/application (5.8ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:24:56 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=dog&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"dog", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:25:35.228542' AND '2014-05-25 11:25:35.228633') AND (task LIKE '%dog%' OR description LIKE '%dog%' or due_date LIKE '%dog%') AND (name LIKE '%dog%')
+  Rendered to_dos/search.html.haml within layouts/application (36.6ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:35 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:25:44.450413' AND '2014-05-25 11:25:44.450606') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' or due_date LIKE '%Jeremy%') AND (name LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (1.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:25:44 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Patrick&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Patrick", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:26:24.111100' AND '2014-05-25 11:26:24.111194') AND (task LIKE '%Patrick%' OR description LIKE '%Patrick%' or due_date LIKE '%Patrick%') AND (name LIKE '%Patrick%')
+  Rendered to_dos/search.html.haml within layouts/application (1.4ms)
+  Rendered to_dos/_search_form.html.haml (1.4ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:24 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:26:26 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (43.4ms)
+  Rendered to_dos/_search_form.html.haml (3.5ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:26:43.786672' AND '2014-05-25 11:26:43.786759') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%') AND (name LIKE '%Joe%')
+  Rendered to_dos/search.html.haml within layouts/application (1.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:26:43 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:30:03 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:30:04.023587' AND '2014-05-25 11:30:04.023685') AND (name LIKE '%Jeremy%') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' or due_date LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (4.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:04 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:30:57.436754' AND '2014-05-25 11:30:57.436886') AND (name LIKE '%Jeremy%') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' or due_date LIKE '%Jeremy%')
+  Rendered to_dos/search.html.haml within layouts/application (4.6ms)
+  Rendered to_dos/_search_form.html.haml (1.2ms)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:30:57 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:31:06.142504' AND '2014-05-25 11:31:06.142626') AND (name LIKE '%Jeremy%') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' or due_date LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (1.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:06 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:31:48.233355' AND '2014-05-25 11:31:48.233475') AND (name LIKE '%Joe%') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')
+  Rendered to_dos/search.html.haml within layouts/application (1.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:31:48 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:32:23.711079' AND '2014-05-25 11:32:23.711175') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (4.5ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:23 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')
+  Rendered to_dos/search.html.haml within layouts/application (34.5ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:32:53 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:33:00 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (1.3ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:00 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:00 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:01 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered to_dos/search.html.haml within layouts/application (15.4ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:41 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%')[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered to_dos/search.html.haml within layouts/application (4.0ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:33:51 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:34:06.705688' AND '2014-05-25 11:34:06.705779')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered to_dos/search.html.haml within layouts/application (11.9ms)
+  Rendered to_dos/_search_form.html.haml (1.2ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:06 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:34:49.213962' AND '2014-05-25 11:34:49.214049') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')
+  Rendered to_dos/search.html.haml within layouts/application (0.4ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:49 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[36mToDo Load (0.3ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:34:59.331039' AND '2014-05-25 11:34:59.331148') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' or due_date LIKE '%Joe%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (0.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:34:59 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:36:00 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 8ms
+
+ArgumentError (bad value for range):
+  app/models/to_do.rb:43:in `search'
+  app/controllers/to_dos_controller.rb:55:in `search'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:36:11.272208' AND '2014-05-25 11:36:11.272296') AND (task LIKE '%Joe%' OR description LIKE '%Joe%' OR due_date LIKE '%Joe%')
+  Rendered to_dos/search.html.haml within layouts/application (4.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:11 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:36:20.729260' AND '2014-05-25 11:36:20.729360') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (1.6ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:36:20 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:37:18.430112' AND '2014-05-25 11:37:18.430237') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+  Rendered to_dos/search.html.haml within layouts/application (4.7ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:18 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:37:28.222283' AND '2014-05-25 11:37:28.222414') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')[0m
+  Rendered to_dos/search.html.haml within layouts/application (1.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:37:28 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:41:26 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:41:26.380504' AND '2014-05-25 11:41:26.380593')
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `joins' for "#<ToDo:0x00000103330be0>OR#<ToDo:0x00000109833998>":String):
+  app/models/to_do.rb:43:in `search'
+  app/controllers/to_dos_controller.rb:55:in `search'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:41:50 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:41:50.769896' AND '2014-05-25 11:41:50.770001')[0m
+Completed 500 Internal Server Error in 39ms
+
+NoMethodError (undefined method `where' for "#<ToDo:0x0000010119c3a8>OR#<ToDo:0x00000101ad6ab8>":String):
+  app/models/to_do.rb:43:in `search'
+  app/controllers/to_dos_controller.rb:55:in `search'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:42:08 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" OR WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:08.460712' AND '2014-05-25 11:42:08.460801') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+SQLite3::SQLException: near "WHERE": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" OR WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:08.460712' AND '2014-05-25 11:42:08.460801') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+  Rendered to_dos/search.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (SQLite3::SQLException: near "WHERE": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" OR WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:08.460712' AND '2014-05-25 11:42:08.460801') AND (task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')):
+     6: 
+     7: .row
+     8:   -unless @to_dos.nil?
+     9:     - @to_dos.each do |to_do|
+    10:       .col-lg-4.col-md-4.col-sm-4
+    11:         .panel.panel-default.custom_panel
+    12: 
+  app/views/to_dos/search.html.haml:9:in `_app_views_to_dos_search_html_haml___3312039335016387508_2227311120'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:42:29 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The method .joins() must contain arguments.):
+  app/models/to_do.rb:39:in `search'
+  app/controllers/to_dos_controller.rb:55:in `search'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:42:40 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:40.876388' AND '2014-05-25 11:42:40.876477') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')[0m
+SQLite3::SQLException: near "OR": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:40.876388' AND '2014-05-25 11:42:40.876477') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+  Rendered to_dos/search.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (SQLite3::SQLException: near "OR": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:42:40.876388' AND '2014-05-25 11:42:40.876477') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')):
+     6: 
+     7: .row
+     8:   -unless @to_dos.nil?
+     9:     - @to_dos.each do |to_do|
+    10:       .col-lg-4.col-md-4.col-sm-4
+    11:         .panel.panel-default.custom_panel
+    12: 
+  app/views/to_dos/search.html.haml:9:in `_app_views_to_dos_search_html_haml___3312039335016387508_2227311120'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:43:08 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  Rendered to_dos/search.html.haml within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Association named 'assignees' was not found on ToDo; perhaps you misspelled it?):
+     6: 
+     7: .row
+     8:   -unless @to_dos.nil?
+     9:     - @to_dos.each do |to_do|
+    10:       .col-lg-4.col-md-4.col-sm-4
+    11:         .panel.panel-default.custom_panel
+    12: 
+  app/views/to_dos/search.html.haml:9:in `_app_views_to_dos_search_html_haml___3312039335016387508_2227311120'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=Jeremy&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:43:23 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"Jeremy", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:43:23.037783' AND '2014-05-25 11:43:23.037875') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+SQLite3::SQLException: near "OR": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:43:23.037783' AND '2014-05-25 11:43:23.037875') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')
+  Rendered to_dos/search.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (SQLite3::SQLException: near "OR": syntax error: SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Jeremy%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:43:23.037783' AND '2014-05-25 11:43:23.037875') AND (OR task LIKE '%Jeremy%' OR description LIKE '%Jeremy%' OR due_date LIKE '%Jeremy%')):
+     6: 
+     7: .row
+     8:   -unless @to_dos.nil?
+     9:     - @to_dos.each do |to_do|
+    10:       .col-lg-4.col-md-4.col-sm-4
+    11:         .panel.panel-default.custom_panel
+    12: 
+  app/views/to_dos/search.html.haml:9:in `_app_views_to_dos_search_html_haml___3312039335016387508_2227311120'
+
+
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (28.5ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 07:46:33 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/judesamp/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.4ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (55.2ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 151ms (Views: 100.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:38 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=1&search%5Bterm%5D=Joe&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"1", "term"=>"Joe", "completed"=>"all"}, "commit"=>"Search"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%Joe%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered to_dos/search.html.haml within layouts/application (12.5ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:45 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:46:52.414736' AND '2014-05-25 11:46:52.414818') AND (task LIKE '%%' OR description LIKE '%%' OR due_date LIKE '%%')[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/search.html.haml within layouts/application (2.5ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:46:52 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=4&search%5Bterm%5D=&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"4", "term"=>"", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:47:08.225217' AND '2014-05-01 11:47:08.225304') AND (task LIKE '%%' OR description LIKE '%%' OR due_date LIKE '%%')[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/search.html.haml within layouts/application (2.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:08 -0400
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-25 07:47:12 -0400
+Processing by ToDosController#new as HTML
+  [1m[36mAssignee Load (0.2ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  Rendered to_dos/_form.html.haml (295.4ms)
+  Rendered to_dos/new.html.haml within layouts/application (309.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 344ms (Views: 342.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:13 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=5&search%5Bterm%5D=&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"5", "term"=>"", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" INNER JOIN "assignees" ON "assignees"."id" = "to_dos"."assignee_id" WHERE (name LIKE '%%') AND ("to_dos"."due_date" BETWEEN '2014-04-24 11:47:21.311650' AND '2014-05-25 11:47:21.311758') AND (task LIKE '%%' OR description LIKE '%%' OR due_date LIKE '%%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/search.html.haml within layouts/application (3.7ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:21 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=4&search%5Bterm%5D=&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"4", "term"=>"", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:47:29.323586' AND '2014-05-01 11:47:29.323678') AND (task LIKE '%%' OR description LIKE '%%' OR due_date LIKE '%%')
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/search.html.haml within layouts/application (2.8ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:29 -0400
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (113.8ms)
+  Rendered assignees/_search_form.html.haml (2.7ms)
+Completed 200 OK in 190ms (Views: 188.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:47:44 -0400
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:50:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (12.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (91.5ms)
+  Rendered assignees/_search_form.html.haml (3.0ms)
+Completed 200 OK in 513ms (Views: 404.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:36 -0400
+
+
+Started GET "/to_dos/search?utf8=%E2%9C%93&search%5Btype%5D=3&search%5Bterm%5D=&search%5Bcompleted%5D=all&commit=Search" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+Processing by ToDosController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"type"=>"3", "term"=>"", "completed"=>"all"}, "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /Users/judesamp/Sites/ironyard/to_do_app/app/models/to_do.rb:43)
+  [1m[36mToDo Load (0.3ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE ("to_dos"."due_date" BETWEEN '2014-04-24 11:50:47.016465' AND '2014-04-25 11:50:47.016619') AND (task LIKE '%%' OR description LIKE '%%' OR due_date LIKE '%%')[0m
+  [1m[35mAssignee Load (0.3ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/search.html.haml within layouts/application (20.1ms)
+  Rendered to_dos/_search_form.html.haml (3.2ms)
+Completed 200 OK in 56ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:50:47 -0400
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:51:01 -0400
+Processing by ToDosController#completed as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  Rendered to_dos/completed.html.haml within layouts/application (5.5ms)
+  Rendered to_dos/_search_form.html.haml (3.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:51:17 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (12.7ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:51:18 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  Rendered to_dos/todolist.html.haml within layouts/application (7.1ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:51:19 -0400
+Processing by ToDosController#completed as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  Rendered to_dos/completed.html.haml within layouts/application (1.9ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:51:20 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (7.1ms)
+  Rendered assignees/_search_form.html.haml (3.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:51:30 -0400
+Processing by ToDosController#completed as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  Rendered to_dos/completed.html.haml within layouts/application (1.9ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:51:31 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  Rendered to_dos/todolist.html.haml within layouts/application (2.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:51:31 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (6.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:51:33 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (7.6ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:51:39 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (5.2ms)
+  Rendered assignees/_search_form.html.haml (0.9ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:51:45 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.3ms)
+  Rendered assignees/_search_form.html.haml (0.9ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:51:49 -0400
+Processing by ToDosController#completed as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  Rendered to_dos/completed.html.haml within layouts/application (2.9ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:51:50 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  Rendered to_dos/todolist.html.haml within layouts/application (2.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:51:51 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.2ms)
+  Rendered assignees/_search_form.html.haml (0.8ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:51:54 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  Rendered to_dos/todolist.html.haml within layouts/application (3.2ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:51:57 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (6.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:52:01 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  Rendered to_dos/todolist.html.haml within layouts/application (2.6ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:52:03 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.9ms)
+  Rendered assignees/_search_form.html.haml (0.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:52:16 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  Rendered to_dos/todolist.html.haml within layouts/application (2.8ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:52:19 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (7.4ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:52:21 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.7ms)
+  Rendered assignees/_search_form.html.haml (0.9ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:52:31 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered to_dos/index.html.haml within layouts/application (25.5ms)
+  Rendered to_dos/_search_form.html.haml (1.2ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/new" for 127.0.0.1 at 2014-04-25 07:52:32 -0400
+Processing by ToDosController#new as HTML
+  [1m[36mAssignee Load (0.2ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  Rendered to_dos/_form.html.haml (79.2ms)
+  Rendered to_dos/new.html.haml within layouts/application (116.5ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 125ms (Views: 123.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:33 -0400
+
+
+Started POST "/to_dos" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxfvpqNWJKtF8JF/DUYscd83wYuOU4ft7aTNTWixvXY=", "to_do"=>{"task"=>"feed the dog", "description"=>"something", "due_date(1i)"=>"2014", "due_date(2i)"=>"4", "due_date(3i)"=>"27", "assignee_id"=>"3"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "to_dos" ("assignee_id", "description", "due_date", "task") VALUES (?, ?, ?, ?)[0m  [["assignee_id", 3], ["description", "something"], ["due_date", Sun, 27 Apr 2014], ["task", "feed the dog"]]
+  [1m[35m (93.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/to_dos
+Completed 302 Found in 117ms (ActiveRecord: 93.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (19.3ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:52:47 -0400
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:52:51 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.4ms)
+  Rendered assignees/_search_form.html.haml (1.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:53:42 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (17.6ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (27.8ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 57ms (Views: 38.6ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:54:06 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (50.8ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.2ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (56.9ms)
+  Rendered assignees/_search_form.html.haml (1.3ms)
+Completed 200 OK in 206ms (Views: 154.3ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:54:17 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (9.9ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.4ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.2ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (36.0ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 54ms (Views: 41.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:14 -0400
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:55:41 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (6.6ms)
+  Rendered assignees/_search_form.html.haml (1.3ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:55:44 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (9.8ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.8ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:55:48 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:55:54 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (11.0ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:55:57 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.8ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:55:58 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.0ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:56:11 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.2ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:56:12 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (9.4ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:22 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:56:24 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.2ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/assignees.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/to_dos.css?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-25 07:56:59 -0400
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:57:33 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (5.5ms)
+  Rendered assignees/_search_form.html.haml (0.9ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:58:07 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (9.7ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:58:37 -0400
+Processing by AssigneesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "assignees"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees"
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 3]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 4]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (5.3ms)
+  Rendered assignees/_search_form.html.haml (0.8ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:58:40 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  Rendered to_dos/todolist.html.haml within layouts/application (3.7ms)
+  Rendered to_dos/_search_form.html.haml (1.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:58:45 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  Rendered to_dos/todolist.html.haml within layouts/application (3.5ms)
+  Rendered to_dos/_search_form.html.haml (1.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:58:47 -0400
+Processing by ToDosController#completed as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  Rendered to_dos/completed.html.haml within layouts/application (2.4ms)
+  Rendered to_dos/_search_form.html.haml (1.4ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignees" for 127.0.0.1 at 2014-04-25 07:58:47 -0400
+Processing by AssigneesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "assignees"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees"[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 3]]
+  [1m[36mToDo Load (0.1ms)[0m  [1mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?[0m  [["assignee_id", 4]]
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."assignee_id" = ?  [["assignee_id", 5]]
+  Rendered assignees/index.html.haml within layouts/application (4.3ms)
+  Rendered assignees/_search_form.html.haml (1.0ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/to_dos/completed" for 127.0.0.1 at 2014-04-25 07:58:50 -0400
+Processing by ToDosController#completed as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 't'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 't'
+  Rendered to_dos/completed.html.haml within layouts/application (2.1ms)
+  Rendered to_dos/_search_form.html.haml (1.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos/todolist" for 127.0.0.1 at 2014-04-25 07:58:54 -0400
+Processing by ToDosController#todolist as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "to_dos" WHERE "to_dos"."completed" = 'f'[0m
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."completed" = 'f'
+  Rendered to_dos/todolist.html.haml within layouts/application (3.2ms)
+  Rendered to_dos/_search_form.html.haml (0.9ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-25 07:58:57 -0400
+Processing by ToDosController#index as HTML
+  [1m[36mToDo Load (0.2ms)[0m  [1mSELECT "to_dos".* FROM "to_dos"[0m
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "assignees".* FROM "assignees" WHERE "assignees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered to_dos/index.html.haml within layouts/application (8.7ms)
+  Rendered to_dos/_search_form.html.haml (0.8ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms)

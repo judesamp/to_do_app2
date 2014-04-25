@@ -12,7 +12,8 @@
 
           %h4.title= link_to to_do.task, "/to_dos/#{to_do.id}", class: "title_link"
           %br
-          = to_do.assignee.name
+          -if to_do.assignee.present?
+            = to_do.assignee.name
           %br
           = to_do.description
           %br

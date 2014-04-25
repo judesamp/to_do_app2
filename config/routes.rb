@@ -1,5 +1,7 @@
 Whatever::Application.routes.draw do
 
+  root 'to_dos#index'
+
   resources :to_dos do
     collection do
       get :todolist
