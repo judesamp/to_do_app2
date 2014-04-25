@@ -14,9 +14,14 @@
           %br
           %ul
             -assignee.to_dos.each do |task|
-
-              = check_box_tag "generic", 1, task.completed
               = task.task
+              = link_to "Completed?", change_completed_duplicate_to_do_path(task), method: "patch"
+              - if task.completed
+                %span.glyphicon.glyphicon-ok.adjust_glyph_position
+              - else
+                %span.glyphicon.glyphicon-remove.adjust_glyph_position
               %br
   -else
     "There are no assignees in the database."
+
+

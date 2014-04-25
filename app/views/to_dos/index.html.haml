@@ -23,11 +23,12 @@
             = to_do.due_date
             %br
           .panel-footer
-            = "Completed?"
+            = link_to "Completed?", change_completed_to_do_path(to_do), method: "patch"
             - if to_do.completed
               %span.glyphicon.glyphicon-ok.adjust_glyph_position
             - else
               %span.glyphicon.glyphicon-remove.adjust_glyph_position
+             
 
   -else
     "There are no locations in the database."

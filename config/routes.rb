@@ -8,6 +8,11 @@ Whatever::Application.routes.draw do
       get :completed
       get :search
     end
+
+    member do 
+      patch :change_completed
+      patch :change_completed_duplicate
+    end
   end
   
   resources :assignees

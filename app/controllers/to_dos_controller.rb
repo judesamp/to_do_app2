@@ -50,6 +50,36 @@ class ToDosController < ApplicationController
     @to_dos = ToDo.completed
   end
 
+  def change_completed
+    @to_do = ToDo.find(params[:id])
+
+    if @to_do.completed
+      val = false
+    else
+      val = true
+      
+    end
+    
+    @to_do.update_attributes(:completed => val)
+
+    redirect_to to_dos_path
+  end
+
+  def change_completed_duplicate
+    @to_do = ToDo.find(params[:id])
+
+    if @to_do.completed
+      val = false
+    else
+      val = true
+      
+    end
+    
+    @to_do.update_attributes(:completed => val)
+    
+    redirect_to assignees_path
+  end
+
   def search
     search_terms = params[:search]
     @to_dos = ToDo.search(search_terms)
