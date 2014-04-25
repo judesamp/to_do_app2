@@ -3,7 +3,8 @@
     
     .panel-heading= @to_do.task
     .panel-body
-      = @to_do.assignee.name
+      -if @to_do.assignee.present?
+        = @to_do.assignee.name
       %br
       = @to_do.description
       %br
@@ -21,4 +22,7 @@
 
 
     / %p= link_to "Download Image", download_item_image_item_path, class: "btn btn-primary form-control"
+
+%br
+%br
   

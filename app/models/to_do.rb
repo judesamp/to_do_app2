@@ -35,12 +35,11 @@ class ToDo < ActiveRecord::Base
     when "4"
       search = search.where(due_date: (DateTime.now - 1.day..(DateTime.now + 6.days)))
     else
-      search = search.joins(:assignee).where("name LIKE ?", "%#{term}%")
-      search = search.where(due_date: (DateTime.now - 1.day..(DateTime.now + 30.days)))
+      search = search.joins(:assignee).where(due_date: (DateTime.now - 1.day..(DateTime.now + 30.days)))
     end
 
     unless type == "1"
-      search = search.find(:all, :conditions => ["task LIKE ? OR description LIKE ? OR due_date LIKE ?", "%#{term}%", "%#{term}%", "%#{term}%"])
+      search = search.joins(:assignee).find(:all, :conditions => ["task LIKE ? OR description LIKE ? OR due_date LIKE ? OR name LIKE ?", "%#{term}%", "%#{term}%", "%#{term}%", "%#{term}%"])
     end
   
     search

@@ -19,7 +19,7 @@
  }
 
  .adjust_button_position {
-  margin-top: 9px;
+  margin-top: 10px;
   margin-left: 100px;
  }
 
@@ -50,6 +50,16 @@
   padding: 0;
  }
 
+ .add_button2 {
+    margin-left: 12px;
+    margin-top: 5px;
+  }
+
+  .add_button3 {
+    margin-left: 22px;
+    margin-top: 10px;
+  }
+
 
  @media (max-width: 760px) {
   body {
@@ -61,4 +71,5 @@
     position: relative;
     margin-bottom: 20px;
   }
+
 }

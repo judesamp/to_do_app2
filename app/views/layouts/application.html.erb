@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whatever</title>
+  <title>To-Doodler</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 
 <div class="container">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <a class="navbar-brand" href="/to_dos">TaskMaster</a>
+    <a class="navbar-brand" href="/to_dos">To-Doodler</a>
     
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -25,9 +25,6 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="">
-          <a href="/to_dos">All-To-Dos</a>
-        </li>
         <li>
           <a href="/to_dos/todolist">The ToDo List</a>
         </li>
@@ -37,11 +34,18 @@
         <li>
           <a href="/assignees">Assignees</a>
         </li>
-         <li>
+        <li>
           <button class="btn btn-primary btn-md adjust_button_position" data-toggle="modal" data-target="#myModal">
             Search
           </button>
         </li>
+        <li class="add_button2">
+          <%= button_to "Add To-Do", new_to_do_path, method: 'get', class: "add_button2 btn btn-md btn-success" %>
+        </li>
+        <li>
+          <%= button_to "Add Doer", new_assignee_path, method: 'get', class: "add_button3 btn btn-md btn-success" %>
+
+        </lid>
       </ul>
     </nav>
   </div>
