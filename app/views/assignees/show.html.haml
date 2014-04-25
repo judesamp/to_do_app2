@@ -1,12 +1,19 @@
 .col-lg8.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-2
-  .panel.panel-default.custom_panel.centered
-    = @assignee.name
-    %br
+.panel.panel-info
+  .panel-heading= @assignee.name
+  .panel-body
     Contact:
     = @assignee.email
     %br
+    %br
     %p 
-      Tasks
-      %ul
-        - @assignee.to_dos.each do |task|
-          %li= task.task
+      %b Tasks
+      %br
+      - @assignee.to_dos.each do |task|
+        = check_box_tag "generic", 1, task.completed
+        = task.task
+        %br
+    %p= link_to "Edit", edit_assignee_path, class: "btn btn-primary form-control"
+
+
+

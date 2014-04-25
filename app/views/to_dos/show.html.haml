@@ -1,16 +1,23 @@
 .col-lg8.col-md-8.col-sm-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-2
-  .panel.panel-default.custom_panel.centered
+  .panel.panel-info
     
-    = @to_do.task
-    = @to_do.assignee
-    %br
-    = @to_do.description
-    %br
-    = @to_do.due_date
-    %br
-    = @to_do.completed
-    %br
-    %p= link_to "Edit", edit_to_do_path, class: "btn btn-primary form-control"
+    .panel-heading= @to_do.task
+    .panel-body
+      = @to_do.assignee.name
+      %br
+      = @to_do.description
+      %br
+      Due Date:
+      = @to_do.due_date
+      %br
+      = "Completed?"
+      - if @to_do.completed
+        %span.glyphicon.glyphicon-ok.adjust_glyph_position
+      - else
+        %span.glyphicon.glyphicon-remove.adjust_glyph_position
+      %br
+      %br
+      %p= link_to "Edit", edit_to_do_path, class: "btn btn-primary form-control"
 
 
     / %p= link_to "Download Image", download_item_image_item_path, class: "btn btn-primary form-control"

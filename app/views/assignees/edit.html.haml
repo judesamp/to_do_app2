@@ -1,6 +1,7 @@
 =form_for @assignee, url: assignee_path, action: "PUT" do |f|
   =render "form", f: f
 
-  = f.submit "Edit"
-.col-sm-12
-  = button_to 'Delete this Item', assignee_path, method: "delete", data: { confirm: "Are you sure?" }, class: "btn btn-primary form-control"
+  = f.submit "Update"
+  %br
+  %br
+  = button_to 'Delete this Item', assignee_path, method: "delete", data: { confirm: "Are you sure?" }, class: "btn btn-danger form-control"

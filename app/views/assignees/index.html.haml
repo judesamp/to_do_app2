@@ -2,17 +2,16 @@
   .col-lg-6.col-md-6.col-sm-6
     %h1.title All Assignees
   .col-lg-6.col-md-6.col-sm-6
-    = button_to "New Assignee", new_assignee_path, method: 'get', class: "add_button"
+    = button_to "Add New Assignee", new_assignee_path, method: 'get', class: "add_button btn btn-success"
 
 .row
   -unless @assignees.empty?
     - @assignees.each do |assignee|
       .col-lg-4.col-md-4.col-sm-4
-        .panel.panel-default.custom_panel
-
-          %h4.title= link_to assignee.name, "assignees/#{assignee.id}", class: "Name"
-        
-          %p To-Do List
+        .panel.panel-info
+          .panel-heading
+            %h4.title= link_to "#{assignee.name}'s To Do List", "assignees/#{assignee.id}", class: "Name"
+          %br
           %ul
             -assignee.to_dos.each do |task|
 

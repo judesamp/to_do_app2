@@ -2,26 +2,32 @@
   .col-lg-6.col-md-6.col-sm-6
     %h1.title To-Dos
   .col-lg-6.col-md-6.col-sm-6
-    = button_to "Add New To-Do", new_to_do_path, method: 'get', class: "add_button"
+    = button_to "Add New To-Do", new_to_do_path, method: 'get', class: "add_button btn btn-success"
 
 .row
-  -unless @to_dos.empty?
+  - if @to_dos.present?
     - @to_dos.each do |to_do|
       .col-lg-4.col-md-4.col-sm-4
-        .panel.panel-default.custom_panel
+        .panel.panel-info
 
-          %h4.title= link_to to_do.task, "to_dos/#{to_do.id}", class: "title_link"
-          %br
-          = to_do.description
-          %br
-          = "Due date:"
-          = to_do.due_date
-          %br
-          = "Completed?"
-          = to_do.completed
-          
-          
-          %br
-          %br
+          .panel-heading= link_to to_do.task, "/to_dos/#{to_do.id}", class: "title_link"
+          .panel-body
+            = "Assigned to:"
+            -if to_do.assignee.present?
+              
+              = to_do.assignee.name
+            %br
+            / = to_do.description
+            %br
+            = "Due date:"
+            = to_do.due_date
+            %br
+          .panel-footer
+            = "Completed?"
+            - if to_do.completed
+              %span.glyphicon.glyphicon-ok.adjust_glyph_position
+            - else
+              %span.glyphicon.glyphicon-remove.adjust_glyph_position
+
   -else
-    "There are no locations in the database."
+    "There are no completed to-dos in the database."
