@@ -50,16 +50,19 @@ class ToDosController < ApplicationController
     @to_dos = ToDo.completed
   end
 
-  def change_completed
-    @to_do = ToDo.find(params[:id])
-
-    if @to_do.completed
+  def toggle_test(to_do)
+    if to_do.completed
       val = false
     else
       val = true
-      
     end
-    
+    val
+  end
+
+  ## figure out how to avoid this duplication
+  def change_completed
+    @to_do = ToDo.find(params[:id])
+    val = toggle_test(@to_do)
     @to_do.update_attributes(:completed => val)
 
     redirect_to to_dos_path
@@ -67,17 +70,18 @@ class ToDosController < ApplicationController
 
   def change_completed_duplicate
     @to_do = ToDo.find(params[:id])
-
-    if @to_do.completed
-      val = false
-    else
-      val = true
-      
-    end
-    
+    val = toggle_test(@to_do)
     @to_do.update_attributes(:completed => val)
     
     redirect_to assignees_path
+  end
+
+  def change_completed_three
+    @to_do = ToDo.find(params[:id])
+    val = toggle_test(@to_do)
+    @to_do.update_attributes(:completed => val)
+    
+    redirect_to assignee_path(@to_do.assignee)
   end
 
   def search
@@ -85,10 +89,10 @@ class ToDosController < ApplicationController
     @to_dos = ToDo.search(search_terms)
   end
 
-
   private
 
   def to_do_params
     params.require(:to_do).permit!
   end 
+  
 end

@@ -18,9 +18,9 @@
       %br 
       = f.label "Completed?"
       %br
-      = radio_button_tag :completed, true, @to_do.completed
+      = f.radio_button :completed, @to_do.completed
       Yes
-      = radio_button_tag :completed, false, !@to_do.completed
+      = f.radio_button :completed, !@to_do.completed
       No
       %br
       %br

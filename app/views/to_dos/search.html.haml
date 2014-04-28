@@ -21,7 +21,10 @@
             %br
           .panel-footer
             = "Completed?"
-            = to_do.completed
+            - if to_do.completed
+              %span.glyphicon.glyphicon-ok.adjust_glyph_position
+            - else
+              %span.glyphicon.glyphicon-remove.adjust_glyph_position
           
   -else
     "There are no locations in the database."

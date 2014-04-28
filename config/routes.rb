@@ -12,6 +12,7 @@ Whatever::Application.routes.draw do
     member do 
       patch :change_completed
       patch :change_completed_duplicate
+      patch :change_completed_three
     end
   end
   
